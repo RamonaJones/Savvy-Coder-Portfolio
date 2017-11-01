@@ -1,0 +1,17 @@
+<style media="screen">
+  body{
+    background-color: pink;
+  }
+  h1{
+    color: red;
+  }
+  ul{
+    background-color: white;
+  }
+  .ExtraPink {
+    color: pink;
+  }
+  #subheader {
+    font-style: italic; color: darkgrey; font-weight: 500;
+  }
+</style>
