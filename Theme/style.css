@@ -1,9 +1,37 @@
-<style media="screen">
+
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.container {
+  max-width: 750px;
+  margin: 10px auto;
+}
+
   body{
+    box-sizing: border-box;
+      width: 500px;
+      height: 100px;
     background-color: pink;
+    max-width: 10px auto;
   }
   h1{
-    color: red;
+    color: hotpink;
   }
   ul{
     background-color: white;
@@ -14,4 +42,92 @@
   #subheader {
     font-style: italic; color: darkgrey; font-weight: 500;
   }
-</style>
+  .header {
+    padding-left: 10px;
+    margin-top: 10px;
+    background-color: black;
+    text-decoration-color: DarkViolet;
+    }
+  }
+.content {
+  border: 2px solid red;
+  padding: 50px 10px 20px 30px;
+  margin: 50px;
+  background-color: lightblue;
+}
+.navigation {
+  position: fixed;
+  top: 0;
+  right:0;
+  width: 100vw;
+  padding: 5px;
+  border: hotpink;
+  background-color: DarkViolet;
+}
+.navigation .dropdown {
+  display: none;
+  position: absolute;
+  top: 55px;
+  right: 0;
+}
+.navigation .dropdown:hover {
+  display: block;
+}
+.navigation a:hover + .dropdown,
+.navigation .dropdown:hover {
+  display: block;
+}
+.navigation > ul > li {
+  position: relative;
+  margin: 4;
+  padding:40px;
+  display: inline;
+}
+navigation > ul > li:hover hover{
+  background-color: red;
+}
+.links {
+border: blue;
+}
+.footer: {
+  border: yellow;
+  background-color: pink;
+  max-width: 10px;
+
+div>p {
+  background-color: gold;
+}
+.div + footer>p {
+  font-style: italic; color: lightgrey;
+}
+.image {
+
+}
+#Footer-Color {
+  background-color:orange;
+}
+#Footer-Color > li:first-child {
+  background-color: White;
+}
+#Footer-Color > li:last-child {
+  background-color: White;
+}
+#Footer-Color > li:nth-child(2) {
+  background-color: White;
+}
+#Footer-Color > li:nth-child(2n+1) {
+  background-color: Red;
+}
+.Footer li:hover {
+  background-color: grey;
+}
+.hover {
+  background-color: grey;
+}
+
+  input[type="text"] {
+    background-color: purple;
+  }
+  input[type="checkbox"]{
+    padding: 40px;
+  }
