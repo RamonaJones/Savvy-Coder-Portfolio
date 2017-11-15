@@ -26,9 +26,10 @@ table {
   body{
     box-sizing: border-box;
       width: 500px;
-      height: 100px;
-    background-color: pink;
-    max-width: 10px auto;
+      height: 500px;
+    background-color: tan;
+    max-width: 100px auto;
+		margin: 50px
   }
   h1{
     color: hotpink;
@@ -39,7 +40,7 @@ table {
   .ExtraPink {
     color: pink;
   }
-  #subheader {
+subheader {
     font-style: italic; color: darkgrey; font-weight: 500;
   }
   .header {
@@ -54,16 +55,16 @@ table {
 .content {
   border: 2px solid red;
   padding: 50px 10px 20px 30px;
-  margin: 50px 0px 0px 100px;
+  margin: 10px 0px 0px 0px;
 	background-color: lightblue;
 }
 .navigation {
-  position: fixed;
+	position: fixed;
   top: 0;
   right:0;
   width: 100vw;
-  padding: 15px;
-  border: hotpink;
+  padding: 5px;
+	border: hotpink;
   background-color: DarkViolet;
 }
 .navigation .dropdown {
@@ -92,14 +93,14 @@ navigation > ul > li:hover hover{
 border: blue;
 }
 .footer: {
-  border: yellow;
+	border: yellow;
   background-color: pink;
   max-width: 10px;
 
 div>p {
   background-color: gold;
 }
-.div + footer>p {
+.div + footer >p {
   font-style: italic; color: lightgrey;
 }
 .image {
