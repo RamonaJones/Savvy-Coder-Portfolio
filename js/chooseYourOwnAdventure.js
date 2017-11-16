@@ -1,38 +1,76 @@
 var story = {
-    "start": "All the puppies in town are missing. The police are stumpted. I'm the lead detective, but I need your help. Will you accept the mission? Yes or No.",
-    "No": "What? You are turning down a major crime busting opportunity. The children of St. Louis need you. Don't let them down. Call me at 314-555-5555 if you reconsider.",
-    "Yes": "Thank you! I'm so glad that you are taking the lead on this investigation. We can use your skills. Where will you begin? Investigate or Think?"
-    "Investigate": "Here are the three people to speak with - Debbie, Mike, and Sandy.",
-    "Think": "Sit in your special chair."
+    "start": {
+        "text": "All the puppies in town are missing. The police are stumpted. I'm the lead detective, but I need your help. Will you accept the mission? Yes or No.",
+        "choices": [ "No", "Yes" ]
+    },
+
+    "Yes": {
+        "text": "Thank you! I'm so glad that you are taking the lead on this investigation. We can use your skills. Where will you begin? Investigate or Think?",
+        "choices": [ "Investigate", "Think" ],
+    },
+    "Investigate": {
+        "text": "Here are the three people to speak with - Debbie, Mike, and Sandy.",
+    },
+    "Think": {
+        "text": "Sit in your special chair.",
+    }  ,
+    "No": {
+        "text": "What? You are turning down a major crime busting opportunity. The children of St. Louis need you. Don't let them down. Call me at 314-555-5555 if you reconsider.",
+    }
 };
 
-var runStory = function runStory(){
-    var choice = prompt( story.start );
 
-    if( choice === "Yes" ){
-      choice = prompt( story[choice] );
+var runStory = function runStory( branch ){
+    var chapter = story[branch];
+    var choices = chapter.choices;
+    var choice;
 
-    if( choice === "Investigate" ){
-      document
-          .querySelector( "#output" )
-          .textContent = story.No;
+    if( choices ){
+        choice = prompt( chapter.text );
+
+        if( choice === choices[0] || choice === choices[1] ){
+            runStory( choice );
         }
-      else if( choice ==="Think"){
-        document
-            .querySelector( "#output" )
-            .textContent = story.No;
-      }
-  
-    }
-    else if( choice === "No" ){
-        document
-            .querySelector( "#output" )
-            .textContent = story.No;
+        else{
+            runStory( branch );
+        }
     }
     else{
-        alert( "You did not enter a valid choice. Please try again." );
-        prompt( story.start );
+        document
+            .querySelector( "#output" )
+            .textContent = chapter.text;
     }
 };
 
-runStory();
+
+runStory( "start" );
+
+// var runStory = function runStory( branch ){
+//     var chapter = story[branch];
+//     var choices = chapter.choices
+//     var choice = prompt( story[branch].text );
+//
+//     if( choices === choices[0] ){
+//         choice = prompt( story[choices].text );
+//
+//         if( choice === chapter.choices ){
+//             document
+//                 .querySelector( "#output" )
+//                 .textContent = story[choice].text;
+//         }
+//         else if( choice === chaptter.choices ){
+//             document
+//                 .querySelector( "#output" )
+//                 .textContent = story[choice].text;
+//         }
+//     }
+//     else if( choice === chaptter.choices ){
+//         document
+//             .querySelector( "#output" )
+//             .textContent = story[branch].text;
+//     }
+//     else{
+//         runStory( choices [0])        alert( "You did not enter a valid choice. Please try again." );
+//         prompt( story[choice].text );
+//     }
+// };
