@@ -24,11 +24,17 @@ var runStory = function runStory( branch ){
     var chapter = story[branch];
     var choices = chapter.choices;
     var choice;
+    var isValidChoice = false;
+    var choice;
 
     if( choices ){
         choice = prompt( chapter.text );
-
-        if( choice === choices[0] || choice === choices[1] ){
+        for( var i = 0; i < choices.length; i++ ){
+            if( choice === choices[i] ){
+                isValidChoice = true;
+            }
+        }
+        if( isValidChoice ){
             runStory( choice );
         }
         else{
@@ -44,6 +50,7 @@ var runStory = function runStory( branch ){
 
 
 runStory( "start" );
+
 
 // var runStory = function runStory( branch ){
 //     var chapter = story[branch];
