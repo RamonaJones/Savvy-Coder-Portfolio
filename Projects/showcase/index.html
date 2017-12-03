@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Grids</title>
+  <style>
+    .gridContainer{
+      display:grid;
+      grid-template-columns: 70% 30%;
+      /*
+      grid-column-gap: 1em;
+      grid-row-gap: 1em;
+      */
+      grid-gap: 1em;
+    }
+
+    .gridContainer > div{
+      background-color: pink;
+      padding: 1em;
+    }
+    .gridContainer > div:nth-child(odd){
+      background-color: grey;
+    }
+  </style>
+</head>
+<body>
+  <div class="gridContainer">
+    <div>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex cum, dolore omnis, perferendis consequatur enim repellat nemo ab? Tempora cupiditate quam quos, totam ipsum rerum harum deserunt alias quidem amet sit consequuntur voluptatibus et, a saepe ipsa vero, maiores aliquam voluptatum similique corrupti ex animi? Nihil necessitatibus facilis sit at iure fugit, soluta laborum et veniam maxime illo praesentium quibusdam tempora labore nulla non doloremque? Debitis ullam omnis iste obcaecati? Aliquam minima, quia eveniet quisquam ut eligendi dolore, similique quibusdam!
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, necessitatibus quaerat eveniet aut facere repellendus eaque, nisi! Nulla inventore ea perspiciatis, cupiditate, beatae animi et, fuga consectetur, error in officia.
+    </div>
+
+
+    <div>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex cum, dolore omnis, perferendis consequatur enim repellat nemo ab? Tempora cupiditate quam quos, totam ipsum rerum harum deserunt alias quidem amet sit consequuntur voluptatibus et, a saepe ipsa vero, maiores aliquam voluptatum similique corrupti ex animi? Nihil necessitatibus facilis sit at iure fugit, soluta laborum et veniam maxime illo praesentium quibusdam tempora labore nulla non doloremque? Debitis ullam omnis iste obcaecati? Aliquam minima, quia eveniet quisquam ut eligendi dolore, similique quibusdam!
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, necessitatibus quaerat eveniet aut facere repellendus eaque, nisi! Nulla inventore ea perspiciatis, cupiditate, beatae animi et, fuga consectetur, error in officia.
+    </div>
+  </div>
+
+</body>
+</html>
