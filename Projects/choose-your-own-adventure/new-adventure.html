@@ -4,19 +4,102 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>My Adventure Plus</title>
+<link rel="stylesheet" href="new-adventure.css">
+  <title>Ramona Jones Web Development Portfolio</title>
 </head>
 <body>
-  <div class="wrapper">
-  <div>One</div>
-  <div>Two</div>
-  <div>Three</div>
-  <div>Four</div>
-  <div>Five</div>
+  <!-- Header Showcase Note content-wrap lets us wrap our text-->
+  <header id="showcase" class="grid">
+     <div class="bg-image"></div>
+     <div class="content-wrap">
+      <h1>Welcome To Ramona's Digital Portfolio</h1>
+      <p>This site highlights JavaScript coding best practices, CSS grid design concepts and basic front-end Web development skills I learned in the Savvy Coders Bootcamp.</p>
+      <a href="#section-b" class="btn">Read More</a>
+      </div>
+  </header>
+
+  <!-- Section A -->
+<main id="main">
+<section id="section-a" class="grid">
+  <div class="content-wrap">
+  <h2 class="content-title">Front-End Web Development & User Documentation</h2>
+  <p>The Savvy Coders Front-End Web Development Bootcamp was a great refresher course to jumpstart my technology background. The coding skills I learned enhance my writing skills and increase the value I bring to employers or clients.</p>
+  </div>
+</section>
+
+<!-- Section B -->
+<section id="section-b" class="grid">
+  <ul>
+    <li>
+      <div class="card">
+        <img src="./web-images/analyst.png" alt="Ramona Jones' UX Writer. Hire a Front-end Web Developer with Technical Writing and Project Coordination Skills">
+        <div class="card-content">
+          <h3 class="card-title"></h3>
+        <p><b>Analyst</b><br>The ability to think like a developer and use JavaScript and tools of the trade go hand-in-hand with my ability to analyze the needs of an audience and produce products, services, training and documentation that meet their needs.</p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="card">
+        <img src="./web-images/uxwriter.png" alt="Ramona Jones' Splash Page. Hire a Front-end Web Developer with Technical Writing and Project Coordination Skills">
+        <div class="card-content">
+          <h3 class="card-title"></h3>
+        <p><b>Designer</b><br>Planning the flow, interactions, and content of the users experience is part of the collaborative process. The Hack-a-Thons taught our cohort how to work as small teams and cross-development teams. We learned to take a part of an assigment and merge our code contributions using GitHub.</p>
+        </div>
+      </div>
+    </li>
+    <li>
+      <div class="card">
+        <img src="./web-images/webdev.png" alt="Ramona Jones' Splash Page. Hire a Front-end Web Developer with Technical Writing and Project Coordination Skills">
+        <div class="card-content">
+          <h3 class="card-title"></h3>
+        <p><b>Coder</b><br>Learning JavaScript objects, functions, arrays, and other coding best practices opens the door to building real world applications. MDN Web Docs, Savvy Coders Slack Channel and other means of support are available for our continued learning.
+          <br>Tools like Atom, Windows PowerShell, Emmet, Browsers, and GitHub are like the canvas we paint code upon for display.</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<!-- Section C -->
+<section id="section-c" class="grid">
+<div class="content-wrap">
+  <h2 class="content-title">Meet your go to resource for digital communications</h2>
+  <p>I'm ready to help you help your users interact with your products, services or processes to accomplish their goals.</p>
 </div>
-  .wrapper {
-  display: grid;
-  grid-template-columns: 500px 1fr 2fr;
-}
+</section>
+
+
+<!-- Section D -->
+<section id="section-d" class="grid">
+<div class="box">
+  <h2 class="content-title">Contact Me</h2>
+  <p>Let's discuss how my skills, experience, professionalism and tenacity can meet your business needs.</p>
+  <p>contact me at <a href="mailto:ramonajonescareer@gmail.com?subject=Saw Your Portfolio; Let's talk about a career">ramonajonescareer@gmail.com</a></p>
+</div>
+<div class="box">
+  <h2 class="content-title">About Ramona</h2>
+  <p>Graduate of Savvy Coders, life-long learner, writer, developer,  personable collaborator with a "Go To & Can Do" attitude.  I'm a solid, creative contributor and asset to any team. </p>
+  <p>I love using my skills to build and make things better. My current pursuit is building technical skills, mastering UX/UI and instructional design and training techniques to create more engaging products and services.</p>
+<h3>Let's Get Interactive!</h3>
+  <p>Want to learn some fun facts about me? Play the <i>Choose Your Own Adventure Game</i>. I created this icebreaker in the Savvy Coders Boot Camp!</p>
+  <a href="index.html" class="btn" >Play Game</a>
+</div>
+</main>
+
+<!-- Footer -->
+<footer id="main-footer" class="grid">
+<div>Ramona Jones, Web Developer / UX Writer</div>
+<div>Project Portfolio</div> <br>
+<div class=footer>Copyright 2017 by Ramona E. Jones. All Rights Reserved.</div>
+</footer>
+
+<!-- all HTML content goes above this line -->
+    <!-- connected libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- connected custom scripts -->
+    <script type="text/javascript" src="/js/chooseYourOwnAdventure.js"></script>
+    <script src="/js/chooseYourOwnAdventure.js" charset="utf-8"></script>
 </body>
 </html>

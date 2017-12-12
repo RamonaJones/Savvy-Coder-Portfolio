@@ -1,0 +1,285 @@
+/* Core Styles */
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, Georgia, sans-serif;
+  background:  darkslategray;
+  color:  white; /* This is text color*/
+  font-size: 1.1em;
+  line-height: 1.5;
+  text-align: center;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 1em 0;
+}
+h1 {
+  font-style: italic;
+  font-name: Georgia;
+  font-family: serif;
+  font-size: 45px;
+  color: peru;
+}
+
+h3 {
+  font-style: oblique;
+  text-align: left;
+  color: paleturquoise;
+}
+
+p {
+  margin: 0;
+  padding: 1em 0;
+}
+
+/* using just block makes the button stretch width of screen*/
+ /* The first 1 em is top to bottom. the second one is left to right*/
+.btn {
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  padding: 1em 2em;
+  background: #333;
+  border: 1px solid #666;
+  margin: 0.5em 0;
+}
+
+.btn:hover {
+  background: #eaeaea;
+  color: #333;
+}
+
+/* Header Showcase  note image called by itself to add transparency*/
+
+#showcase {
+  min-height: 450px;
+  color: #fff;
+  text-align: center;
+}
+#showcase2 {
+  min-height: 450px;
+  color: #fff;
+  text-align: center;
+  margin-top: 70px;
+}
+/* must set position to absolute because it goes in background*/
+ /* wont see image until you add width and height dimensions. Must be the same height as showcase above*/
+/* fades out image. The lower the nummber the more tranparent*/
+#showcase2 .bg-image {
+  position: absolute;
+  padding-top: 250px;
+  background: #333
+    url("web-images/splash.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+  z-index: -1;
+  opacity: 0.9
+
+}
+
+#showcase .bg-image {
+  position: absolute;
+  background: #333
+    url("https://static.pexels.com/photos/248515/pexels-photo-248515.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 450px;
+  z-index: -1;
+  opacity: 0.4
+}
+
+#showcase h1 {
+  padding-top: 100px;
+  padding-bottom: 0;
+}
+/* Padding */
+#showcase .content-wrap,
+#section-a .content-wrap {
+  padding: 0 1.5em;
+}
+
+/* Section A */
+
+#section-a {
+  background: #eaeaea;
+  color: #333;
+  padding-bottom: 2em;
+}
+
+/* Section B */
+
+#section-b {
+  padding: 2em 1em 1em;
+}
+
+#section-b ul {
+  list-style: none; /*get rid of bullets that appear by default */
+  margin: 0;
+  padding: 0;
+}
+
+#section-b li {
+  margin-bottom: 1em;
+  background: #fff;
+  color: #333;
+}
+/* Add paddinig to the card content only instead of on the section-b card in
+case you want to use the .card-content some place else */
+.card-content {
+  padding: 1.5em;
+}
+
+/* Section C */
+
+#section-c {
+  background: #fff; /* White backgroun */
+  color: #333; /* dark text */
+  padding: 2em;
+}
+
+/* Section D / Boxes */
+
+#section-d .box {
+  padding: 2em;
+  color:  #fff;
+}
+
+#section-d .box:first-child { /* Add pseudo class called first-child */
+  background: cadetblue;
+  text-align: left;
+}
+ /* Add pseudo class to left align text in the entire box. can use #section-d  h3 + p {
+   text-align: left;  to only left align the first paragraph after the h3 tag*/
+#section-d   p {
+  text-align: left;
+}
+#box2  li{
+  text-align: left;
+}
+/* Footer */
+
+#main-footer {
+  padding: 2em;
+  background: peru;
+  color: #fff;
+  text-align: center;
+}
+/* Chanes the color of the link if I add one in my footer. Also removes the unerline */
+#main-footer a {
+  color: #2690d4;
+  text-decoration: none;
+}
+
+.navigation {
+  opacity: 1;
+}
+
+#navigation {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: peru;
+  text-align: center;
+}
+
+#navigation a {
+    text-decoration: none;
+    color: white;
+}
+
+#navigation > ul {
+
+  color: white;
+  font-size: 20px;
+  font-family: sans-serif;
+  list-style: none;
+
+}
+
+#navigation > ul > li {
+  display: inline;
+  margin: 1px;
+  position: relative;
+  text-decoration: none;
+  padding: 20px
+}
+
+#navigation li:hover {
+  background-color: peru;
+}
+
+#navigation a:hover {
+  color: darkslategray;
+}
+
+/* Media Queries makes the page respond to larger screens, since this is Web first design*/
+
+@media (min-width: 700px) {  /* Makes the site look good on larger screens. Any styles here will be in effect for screens over 700px */
+  .grid {
+    display: grid;
+    /* This is a 4-colunm layout. The two middle columns are passed the minmax function that takes two arguments (auto, 25em) each column is 25em.  */
+    grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+  }
+
+  #section-a .content-text {
+    columns: 2;
+    column-gap: 2em;
+  }
+
+  #section-a .content-text p {
+    padding-top: 0; /* Makes the two columns of text align to the top */
+  }
+
+  .content-wrap,
+  #section-b ul {
+    grid-column: 2/4;
+  }
+
+  .box,
+  #main-footer div {
+    grid-column: span 2;
+  }
+
+  #section-b ul {
+    display: flex;  /* Spreads the space evenly around the columns */
+    justify-content: space-around;
+  }
+
+  #section-b li {
+    width: 31%;
+  }
+}
+.footer {
+  font-size: 9px;
+}
+#quote {
+  font-style: italic;
+  font-family: Georgia;
+  color: cadetblue;
+}
+#section-display > ul > li {
+  display: flex;
+  margin: 10px;
+  position: relative;
+  padding: 5px;
+  list-style-type: none;
+}
+#section-display ul {
+  list-style-type: none;
+}

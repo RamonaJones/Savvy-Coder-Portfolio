@@ -15,6 +15,6 @@ grid-template-columns: repeat(3, 1fr);
 
 @media (min-width: 415px) {
   #grid > div {
-    grid-template-columns: reeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }

@@ -1,0 +1,126 @@
+/*set up universal box-sizing adjustment*/
+
+html {
+  box-sizing: border-box;
+}
+
+
+/*put all other styles below this line, please*/
+
+.header {
+    grid-area: hd;
+    width: 100vw;
+    position: static;
+    top: 0;
+    right: 0;
+    text-align: center;
+}
+.footer {
+    grid-area: ft;
+}
+.image {
+    grid-area: main;
+    max-width: 100%;
+    height: auto;
+  }
+}
+.display {
+    grid-area: main;
+}
+.sidebar {
+    grid-area: sd;
+}
+
+.wrapper {
+    display: grid;
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "image"
+      "main"
+      "sidebar"
+      "footer"
+    }
+
+
+
+
+
+#navigation {
+  width: 100vw;
+  position: static;
+  top: 0;
+  right: 0;
+  background-color: peru;
+  text-align: center;
+}
+
+#navigation a {
+    text-decoration: none;
+    color: white;
+}
+
+#navigation > ul {
+
+  color: white;
+  font-size: 20px;
+  font-family: sans-serif;
+  list-style: none;
+
+}
+
+#navigation > ul > li {
+  display: inline;
+  margin: 5px;
+  position: relative;
+  text-decoration: none;
+}
+
+#navigation li:hover {
+  background-color: blue;
+}
+
+#navigation a:hover {
+  color: orange;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas:
+      "hd hd hd hd   hd   hd   hd   hd   hd"
+      "sd sd sd .  img  img  img  img  img"
+      "sd sd sd . main main main main main"
+
+}
+* {box-sizing: border-box;}
+
+.media {
+    border: 2px solid #f76707;
+    border-radius: 5px;
+    background-color: #fff4e6;
+    max-width: 400px;
+}
+.media {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: "img content";
+    margin-bottom: 1em;
+}
+
+.media.flipped {
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "content img";
+}
+
+.media .image {
+    grid-area: img;
+    background-color: #ffd8a8;
+}
+
+.media .text {
+    grid-area: content;
+    padding: 10px;
+
+}
