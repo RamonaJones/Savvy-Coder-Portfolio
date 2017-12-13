@@ -1,16 +1,17 @@
 /* eslint-disable no-use-before-define */
+/* globals $ */
 // var runStory = function runStory( branch ){
 //     var chapter = story[branch];
 //     var choices = chapter.choices
 //     var choice = prompt( story[branch].text );
 var story = {
     "start": {
-        "text": "Are you most interested in learning about Ramona as a person or the tech skills she brings to the table? Type Personal to check out my hobbies. Type Business to learn about my experience and skillset.",
+        "text": "Are you most interested in learning about Ramona as a person or the tech skills she brings to the table? <br>Type <b>Personal</b> to check out my hobbies, or <br>Type <b>Business</b> to learn about my experience and skillset.",
         "choices": [ "Personal", "Business" ]
     },
 
     "Personal": {
-        "text": "I'm a self-published author of two books. Writing helps me to create meaning and better understand life. I find journaling creative and healing. I enjoy helping people to learn and encouraging them to win at being their best. To learn more about me, type Author to see my books or type Speaker to watch a short YouTube video.",
+        "text": "I'm a self-published author of two books. Writing helps me to create meaning and better understand life. I find journaling creative and healing. I enjoy helping people to learn and encouraging them to win at being their best. Want to learn more? <br>Type <b>Author</b> to see my books, or <br>Type <b>Speaker</b> to watch a short YouTube video.",
         "choices": [ "Author", "Speaker" ],
     },
     "Author": {
@@ -24,10 +25,8 @@ var story = {
     }
 };
 
+var $choice = $( "#choice" );
 
-var myForm = document.getElementById( "frmChoice" );
-
-myForm.addEventListener( "btnclick", validateChoice, false );
 
 function validateChoice( choice, choices ){
     var isValidChoice = choice.isValidChoice;
@@ -35,40 +34,28 @@ function validateChoice( choice, choices ){
     for( let i = 0; i < choices.length; i++ ){
         if( choice === choices[i] ){
             isValidChoice = true;
-            choice.preventDefault();
-            choices.preventDefault();
         }
     }
 
     return isValidChoice;
 }
 
-function handleChoices( chapter, branch ){
-    // var choice = prompt( chapter.text );
-    var choice = $( "#txtOutput" ).text( chapter.text );
-
-    if( validateChoice( choice, chapter.choices ) ){
-        runStory( choice );
-    }
-    else{
-        runStory( branch );
-    }
-}
 
 function runStory( branch ){
     var chapter = story[branch];
 
-    if( chapter.choices ){
-        handleChoices( chapter, branch );
-    }
-    else{
-        var choice = txtOutput.value;
+    $choice.on( "keyup", ( event ) => {
+        var userInput = $( event.target ).val();
 
-        document
-            .querySelector( "#txtOutput" )
-            .textContent = chapter.text;
-        choice.preventDefault();
-    }
+        if( validateChoice( userInput, chapter.choices ) ){
+            $choice.off( "keyup" );
+            runStory( userInput );
+        }
+    } );
+
+    document
+        .querySelector( "#textOutput" )
+        .innerHTML = chapter.text;
 }
 
 runStory( "start" );
