@@ -48,19 +48,21 @@ function runStory( branch ){
         var userInput = $( event.target ).val();
 
         if( validateChoice( userInput, chapter.choices ) ){
-            $choice.off( "keyup" );
+            // $choice.off( "keyup" );//
+            $choice.val( "" );
             runStory( userInput );
         }
     } );
 
     document
+        console.log("event");
         .querySelector( "#textOutput" )
         .innerHTML = chapter.text;
 }
 
 runStory( "start" );
 
-
+$( ".button" ).on( "click", () => runStory( "start" ) );
 // var runStory = function runStory( branch ){
 //     var chapter = story[branch];
 //     var choices = chapter.choices
