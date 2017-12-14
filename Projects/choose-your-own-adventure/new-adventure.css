@@ -138,6 +138,15 @@ p {
   background: #fff;
   color: #333;
 }
+
+#contactForm {
+  background-color: white;
+  margin: 2px;
+  padding: 1.5em;
+}
+
+
+
 /* Add paddinig to the card content only instead of on the section-b card in
 case you want to use the .card-content some place else */
 .card-content {

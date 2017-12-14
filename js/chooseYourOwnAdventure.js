@@ -6,23 +6,24 @@
 //     var choice = prompt( story[branch].text );
 var story = {
     "start": {
-        "text": "Are you most interested in learning about Ramona as a person or the tech skills she brings to the table? <br>Type <b>Personal</b> to check out my hobbies, or <br>Type <b>Business</b> to learn about my experience and skillset.",
+        "text": "Hello, I’m Ramona Jones. What’s keeping me busy these days? I’m glad you asked.  <br>Type <b>Personal</b> to learn about my hobbies, or <br>Type <b>Business</b> to see what I’m learning. (Note: Your entry is case sensitive.)",
         "choices": [ "Personal", "Business" ]
     },
 
     "Personal": {
-        "text": "I'm a self-published author of two books. Writing helps me to create meaning and better understand life. I find journaling creative and healing. I enjoy helping people to learn and encouraging them to win at being their best. Want to learn more? <br>Type <b>Author</b> to see my books, or <br>Type <b>Speaker</b> to watch a short YouTube video.",
+        "text": "<h2>My Personal Dimension</h2>I'm a self-published author of two books. Writing helps me to create meaning and better understand life in ways that inspire others. Want to learn more? <br>Type <b>Author</b> to see my books, or <br>Type <b>Speaker</b> to watch a short YouTube video.<p>Click<b> Restart</b> to make another selection.",
         "choices": [ "Author", "Speaker" ],
     },
     "Author": {
-        "text": "I hope you enjoy learning about me as an author. You can purchase my books on Amazon. My Blog in the works.",
+        "text": "<h2>My Personal Dimension: Author</h2><img src='./web-images/mybooks.JPG' alt='Books From Tongue To Ear To Heart So Says the Wise and Your Legacy Voice The Prelude To Your Breakthrough' width='453' height'320'><p>I hope you enjoyed learning about me as an author. Join my mailing list below, and I’ll send you an invite to my virtual Blog Launch Party.</p><p>Click  <b>Restart</b> to make another selection.</p>",
     },
     "Speaker": {
-        "text": "I hope my video inspires you to write. I'm happy to discuss your next steps.",
+        "text": "<h2>My Personal Dimension: Speaker</h2>I hope my video inspires you to write. I'm happy to discuss your next steps. <p><iframe width='640' height='360' src='https://www.youtube.com/embed/M5jIHLIMXhQ#t=7m35s' frameborder='0' gesture='media' allow='encrypted-media' allowfullscreen></iframe></p><p>Click<b>Restart</b> to make another selection.",
     }  ,
     "Business": {
-        "text": "Learning is one of my top five strengths. I'm driven by my need to know. I have experience in multimedia development, technical writing, Web page development and graphic design. I'm also passionate about user-centered design. I'm currently pursuing UX development as a member of Interaction Design Foundation. If you are a great company in need of a life-long with front-end Web development, communications, and project coordination skills, than let's talk.",
+        "text": "<h2>My Business Dimension</h2><ol align=left><li><b>Learning</b> is one of my top five strengths. I'm driven by my need to know. </li><li><b>Developing</b> useful products, services and experiences is my passion. <ul> <li>Web Page Development and Graphic Design</li><li>User-Centered Design, UX</li><li>Technical Writing and Instructional Design </li></ul></ol><p align=left>If you are a great company in need of a life-long learner with front-end Web development, interpersonal communications, and project coordination skills, then let's talk.</p><p>Click<b> Restart</b> to make another selection.",
     }
+
 };
 
 var $choice = $( "#choice" );
@@ -53,9 +54,7 @@ function runStory( branch ){
             runStory( userInput );
         }
     } );
-
     document
-        console.log("event");
         .querySelector( "#textOutput" )
         .innerHTML = chapter.text;
 }
