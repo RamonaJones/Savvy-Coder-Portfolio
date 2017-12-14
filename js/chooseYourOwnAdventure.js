@@ -15,7 +15,7 @@ var story = {
         "choices": [ "Author", "Speaker" ],
     },
     "Author": {
-        "text": "<h2>My Personal Dimension: Author</h2><img src='./web-images/mybooks.JPG' alt='Books From Tongue To Ear To Heart So Says the Wise and Your Legacy Voice The Prelude To Your Breakthrough' width='453' height'320'><p>I hope you enjoyed learning about me as an author. Join my mailing list below, and I’ll send you an invite to my virtual Blog Launch Party.</p><p>Click  <b>Restart</b> to make another selection.</p>",
+        "text": "<h2>My Personal Dimension: Author</h2><img src='./web-images/mybooks.JPG' alt='Books From Tongue To Ear To Heart So Says the Wise and Your Legacy Voice The Prelude To Your Breakthrough' width='453' height'320'><p>I hope you enjoyed learning about me as an author. Join my mailing list above, and I’ll send you an invite to my virtual Blog Launch Party.</p><p>Click  <b>Restart</b> to make another selection.</p>",
     },
     "Speaker": {
         "text": "<h2>My Personal Dimension: Speaker</h2>I hope my video inspires you to write. I'm happy to discuss your next steps. <p><iframe width='640' height='360' src='https://www.youtube.com/embed/M5jIHLIMXhQ#t=7m35s' frameborder='0' gesture='media' allow='encrypted-media' allowfullscreen></iframe></p><p>Click<b>Restart</b> to make another selection.",
